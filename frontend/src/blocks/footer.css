@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 132px;
+  margin: 66px 0 88px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__copyright {
+  width: 191px;
+  height: 16px;
+  color: #545454;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media screen and (max-width: 880px) {
+  .footer {
+    height: auto;
+    text-align: center;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    height: auto;
+
+    margin: 25px 0 25px 17px;
+    align-items: flex-start;
+  }
+}

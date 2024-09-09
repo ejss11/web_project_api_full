@@ -1,0 +1,4 @@
+# .gitignore
+.env
+/logs/request.log
+/logs/error.log
