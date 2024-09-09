@@ -6,6 +6,7 @@ import {
   updateUserProfile,
   updateUserAvatar,
   getCurrentUser,
+  createUser,
 } from "../controllers/users.js";
 import userValidation from "../validators/validatorUsers.js";
 

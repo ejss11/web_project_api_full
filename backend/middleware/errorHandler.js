@@ -1,5 +1,5 @@
 // middleware/errorHandler.js
-import { errorLogger } from "./logger";
+import { errorLogger } from "./logger.js";
 
 const errorHandler = (err, req, res, next) => {
   console.error(err.stack);

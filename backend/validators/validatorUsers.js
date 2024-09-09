@@ -1,5 +1,5 @@
 import { celebrate, Joi, Segments } from "celebrate";
-import validatorUrl from "./validateUrl";
+import validatorUrl from "./validateUrl.js";
 
 const userValidation = celebrate({
   [Segments.BODY]: Joi.object().keys({

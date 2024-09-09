@@ -1,5 +1,5 @@
 // middleware/requestLogger.js
-import { requestLogger } from "./logger";
+import { requestLogger } from "./logger.js";
 
 export const logRequests = (req, res, next) => {
   requestLogger.info({

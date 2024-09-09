@@ -1,4 +1,4 @@
-import { celebrate, Joi, errors, Segments } from "celebrate";
+//import { celebrate, Joi, errors, Segments } from "celebrate";
 import validator from "validator";
 
 //validacion personalizada para URLs usando validator.isURL

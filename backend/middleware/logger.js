@@ -1,6 +1,11 @@
 //middleware/logger.js
 import { createLogger, format, transports } from "winston";
 import path from "path";
+import { fileURLToPath } from "url";
+
+// Obtén la ruta del archivo actual
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Formato de los logs en JSON
 const logFormat = format.combine(format.timestamp(), format.json());

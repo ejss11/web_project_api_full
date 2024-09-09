@@ -8,6 +8,7 @@ import errorHandler from "./middleware/errorHandler.js";
 import { logRequests } from "./middleware/requestLogger.js";
 import { errors } from "celebrate";
 import path from "path";
+import { fileURLToPath } from "url";
 
 //importar controladores  users y login
 import { createUser } from "./controllers/users.js";
@@ -18,6 +19,9 @@ import usersRoutes from "./routes/users.js";
 import cardsRoutes from "./routes/cards.js";
 
 const { PORT, DB_URL } = process.env;
+// Obtén la ruta del archivo actual
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 console.log(DB_URL);
 app.use(bodyParser.json());
