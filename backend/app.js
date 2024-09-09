@@ -18,7 +18,7 @@ import { login } from "./controllers/login.js";
 import usersRoutes from "./routes/users.js";
 import cardsRoutes from "./routes/cards.js";
 
-const { PORT, DB_URL } = process.env;
+const { PORT = 3001, DB_URL } = process.env;
 // Obtén la ruta del archivo actual
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
