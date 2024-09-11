@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import jwt from "jsonwebtoken";
 const { NODE_ENV, JWT_SECRET, BASE_URL } = process.env;
 //import { baseUrl, groupId, token } from "./constants";
