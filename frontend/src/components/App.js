@@ -53,15 +53,17 @@ function App() {
   }, [navigate]);
 
   useEffect(() => {
-    Promise.all([api.getInitialCards(), api.getUserInfo()])
-      .then(([cardsData, userInfo]) => {
-        setCards(cardsData);
-        setCurrentUser(userInfo);
-      })
-      .catch((err) => {
-        console.error(`Error : ${err}`);
-      });
-  }, []);
+    if (loggedIn) {
+      Promise.all([api.getInitialCards(), api.getUserInfo()])
+        .then(([cardsData, userInfo]) => {
+          setCards(cardsData);
+          setCurrentUser(userInfo);
+        })
+        .catch((err) => {
+          console.error(`Error : ${err}`);
+        });
+    }
+  }, [loggedIn]);
 
   function handleUpdateUser(userData) {
     api
@@ -148,14 +150,14 @@ function App() {
     navigate("/signin");
   }
 
-  const handleLogin = () => {
+  const handleLogin = (token) => {
     checkToken()
       .then((data) => {
         setUserEmail(data.name);
         setIsLoggedIn(true);
         setIsSuccess(true);
         setIsInfoTooltipOpen(true);
-
+        api.setToken(token);
         navigate("/");
       })
       .catch((err) => {

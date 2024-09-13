@@ -1,10 +1,14 @@
 import { token, groupId, baseUrl } from "../utils/constants";
 
 class Api {
-  constructor({ address, groupId, token }) {
+  constructor({ address, groupId = "", token }) {
     this._address = address;
     this._groupId = groupId;
     this._token = token;
+  }
+
+  setToken(token) {
+    this._token = `Bearer ${token}`;
   }
 
   _getHeaders() {

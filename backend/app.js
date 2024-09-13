@@ -9,7 +9,7 @@ import { logRequests } from "./middleware/requestLogger.js";
 import { errors } from "celebrate";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import cors from "cors";
 //importar controladores  users y login
 import { createUser } from "./controllers/users.js";
 import { login } from "./controllers/login.js";
@@ -23,6 +23,7 @@ const { PORT = 3001, DB_URL } = process.env;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
+app.use(cors());
 console.log(DB_URL);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

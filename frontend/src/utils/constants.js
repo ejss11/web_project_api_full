@@ -80,7 +80,7 @@ export const cardTitle = document.querySelector(".card__content-title");
 
 export const groupId = "web_es_10";
 export const token = "97efebdf-3fe2-4b9f-9063-79770a806abe";
-export const baseUrl = "https://around.nomoreparties.co/v1/";
+export const baseUrl = "https://api.eduardo.desarrollointerno.com";
 
 export const profileNameNode = document.querySelector(
   ".profile__heading-title"

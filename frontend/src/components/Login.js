@@ -24,7 +24,7 @@ function Login({ onLogin }) {
           localStorage.setItem("jwt", data.token);
           setIsSuccess(true);
           setIsInfoTooltipOpen(true);
-          onLogin(); // Actualiza el estado de autorización en App.js
+          onLogin(data.token); // Actualiza el estado de autorización en App.js
           navigate("/"); // Redirige a la página principal
         }
       })

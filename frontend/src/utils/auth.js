@@ -1,5 +1,5 @@
 import { baseUrl, groupId, token } from "./constants";
-const BASE_URL = "https://eduardo.desarrollointerno.com";
+const BASE_URL = "https://api.eduardo.desarrollointerno.com";
 
 // Función para registrar un nuevo usuario
 export const register = (email, password) => {
