@@ -7,18 +7,22 @@ const userSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    default: "Eduardo Silva",
     minlength: 2,
     maxlength: 30,
   },
   about: {
     type: String,
     required: true,
+    default: "Inventor, scientist",
     minlength: 2,
     maxlength: 30,
   },
   avatar: {
     type: String,
     required: true,
+    default:
+      "https://media.wired.com/photos/5c86f3dd67bf5c2d3c382474/4:3/w_2400,h_1800,c_limit/TBL-RTX6HE9J-(1).jpg",
     validate: {
       validator: function (v) {
         return urlRegex.test(v);

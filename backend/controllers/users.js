@@ -50,13 +50,13 @@ export const getCurrentUser = (req, res, next) => {
 
 // POST /users — Crear un Nuevo usuario
 export const createUser = async (req, res) => {
-  const { name, about, avatar, email, password } = req.body;
+  const { email, password } = req.body;
 
   //Generar un hash de la contraseña antes de guardar el usuario
   bcrypt
     .hash(password, 10)
     .then((hash) => {
-      return User.create({ name, about, avatar, email, password: hash });
+      return User.create({ email, password: hash });
     })
     .then((userData) => {
       //Evitar devolver el hash de la contraseña
