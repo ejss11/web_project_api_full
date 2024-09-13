@@ -1,4 +1,4 @@
-import { baseUrl, groupId, token } from "./constants";
+import { baseUrl } from "./constants";
 const BASE_URL = "https://api.eduardo.desarrollointerno.com";
 
 // Función para registrar un nuevo usuario
@@ -36,11 +36,12 @@ export const authorize = (email, password) => {
 
 // Función para comprobar la validez del token
 export const checkToken = async () => {
-  return fetch(`${baseUrl}${groupId}/users/me`, {
+  const token = localStorage.getItem("jwt");
+  return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `${token}`,
+      Authorization: `Bearer ${token}`,
     },
   }).then((response) => {
     if (!response.ok) {

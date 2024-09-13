@@ -1,4 +1,4 @@
-import { token, groupId, baseUrl } from "../utils/constants";
+import { token, baseUrl } from "../utils/constants";
 
 class Api {
   constructor({ address, groupId = "", token }) {
@@ -90,7 +90,7 @@ class Api {
 
 const api = new Api({
   address: baseUrl,
-  groupId: groupId,
+  groupId: "",
   token: token,
 });
 

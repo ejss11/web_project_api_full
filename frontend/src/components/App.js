@@ -153,11 +153,11 @@ function App() {
   const handleLogin = (token) => {
     checkToken()
       .then((data) => {
+        api.setToken(token);
         setUserEmail(data.name);
         setIsLoggedIn(true);
         setIsSuccess(true);
         setIsInfoTooltipOpen(true);
-        api.setToken(token);
         navigate("/");
       })
       .catch((err) => {
