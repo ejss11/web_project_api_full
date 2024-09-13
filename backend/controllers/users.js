@@ -66,13 +66,13 @@ export const createUser = async (req, res) => {
     })
     .catch((err) => {
       if (err.name === "ValidationError") {
-        res.status(400).send({ message: "Datos Invalidos" });
+        res.status(400).send({ message: "Datos Invalidos", err });
       } else if (err.statusCode === 11000) {
         res
           .status(409)
-          .send({ message: "El correo electrónico ya esta registrado" });
+          .send({ message: "El correo electrónico ya esta registrado", err });
       } else {
-        res.status(500).send({ message: "Error interno del servidor" });
+        res.status(500).send({ message: "Error interno del servidor", err });
       }
     });
 };
