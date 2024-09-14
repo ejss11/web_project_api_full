@@ -4,7 +4,6 @@ import "../blocks/cards.css";
 
 function Card({ cardData, onCardClick, onCardLike, onCardDelete }) {
   const currentUser = useContext(CurrentUserContext);
-  console.log("Datos de la Tarjeta > " + cardData.owner);
   const isOwn = cardData.owner === currentUser._id;
   const cardDeleteButtonClassName = `card__image-delete ${
     isOwn ? "card__image-delete" : "card__image-delete_hidden"

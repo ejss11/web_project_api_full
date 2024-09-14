@@ -33,12 +33,12 @@
   border-right: none;
   margin: 0 0 0 0;
   background: transparent;
-  color: #fff;
+  color: #000;
   margin-top: 25px;
 }
 .form__submit {
   width: 100%;
-  margin: 216px 0 0 0;
+  margin: 30px 0 0 0;
   padding: 0;
   background-color: #fff;
   color: black;
