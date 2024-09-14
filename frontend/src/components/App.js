@@ -132,7 +132,11 @@ function App() {
 
   function handleCardLike(card) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
-
+    console.log("este es el like card: " + isLiked);
+    console.log("Este es el id de la tarjeta" + card._id);
+    console.log("Este es el usuario" + currentUser.name);
+    let token = localStorage.getItem("jwt");
+    console.log("Token recuperado es: " + token);
     api
       .changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {

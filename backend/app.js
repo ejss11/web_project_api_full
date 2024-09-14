@@ -23,7 +23,11 @@ const { PORT = 3001, DB_URL } = process.env;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://eduardo.desarrollointerno.com:3000",
+  })
+);
 console.log(DB_URL);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

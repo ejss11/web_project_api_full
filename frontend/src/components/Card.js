@@ -4,13 +4,14 @@ import "../blocks/cards.css";
 
 function Card({ cardData, onCardClick, onCardLike, onCardDelete }) {
   const currentUser = useContext(CurrentUserContext);
-
-  const isOwn = cardData.owner._id === currentUser._id;
+  console.log("Datos de la Tarjeta > " + cardData.owner);
+  const isOwn = cardData.owner === currentUser._id;
   const cardDeleteButtonClassName = `card__image-delete ${
     isOwn ? "card__image-delete" : "card__image-delete_hidden"
   }`;
 
-  const isLiked = cardData.likes.some((i) => i._id === currentUser._id);
+  const isLiked = cardData.likes.some((i) => i === currentUser._id);
+  console.log("Estes es el like para activar: " + isLiked);
   const cardLikeButtonClassName = `card__content-like ${
     isLiked ? "card__content-like_Active" : ""
   }`;

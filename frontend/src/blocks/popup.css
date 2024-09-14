@@ -86,6 +86,7 @@
   border-left: none;
   border-right: none;
   margin: 0 0 0 0;
+  color: black;
 }
 
 .form__input:valid {
@@ -98,7 +99,7 @@
 }
 
 .form__submit {
-  margin: 10.26px 0 0 0;
+  margin: 26px 0 0 0;
   border: 0;
   background-color: black;
   color: white;

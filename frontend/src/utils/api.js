@@ -1,4 +1,4 @@
-import { token, baseUrl } from "../utils/constants";
+import { baseUrl } from "../utils/constants";
 
 class Api {
   constructor({ address, groupId = "", token }) {
@@ -73,7 +73,7 @@ class Api {
   }
 
   changeLikeCardStatus(cardId, isLiked) {
-    return fetch(`${this._address}${this._groupId}/cards/likes/${cardId}`, {
+    return fetch(`${this._address}${this._groupId}/cards/${cardId}/likes`, {
       method: isLiked ? "PUT" : "DELETE",
       headers: this._getHeaders(),
     }).then(this._checkResponse);
@@ -91,7 +91,7 @@ class Api {
 const api = new Api({
   address: baseUrl,
   groupId: "",
-  token: token,
+  token: `Bearer ${localStorage.getItem("jwt")}`,
 });
 
 export default api;
