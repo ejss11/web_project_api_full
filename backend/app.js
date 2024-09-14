@@ -25,7 +25,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(
   cors({
-    origin: "https://eduardo.desarrollointerno.com:3000",
+    origin: "https://eduardo.desarrollointerno.com",
   })
 );
 console.log(DB_URL);
