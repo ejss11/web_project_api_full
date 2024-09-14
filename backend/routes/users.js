@@ -13,11 +13,11 @@ import userValidation from "../validators/validatorUsers.js";
 // Obtener todos los usuarios
 router.get("/users", getUsers);
 
-// Obtener un usuario por ID
-router.get("/users/:userId", getUserId);
-
 // Obtener la información del usuario actual
 router.get("/users/me", getCurrentUser);
+
+// Obtener un usuario por ID
+router.get("/users/:userId", getUserId);
 
 //Crear un Nuevo Usuario
 router.post("/users", userValidation, createUser);
