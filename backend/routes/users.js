@@ -8,7 +8,6 @@ import {
   getCurrentUser,
   createUser,
 } from "../controllers/users.js";
-import userValidation from "../validators/validatorUsers.js";
 import { checkToken } from "../middleware/auth.js";
 
 // Obtener todos los usuarios
@@ -21,7 +20,7 @@ router.get("/users/me", checkToken, getCurrentUser);
 router.get("/users/:userId", checkToken, getUserId);
 
 //Crear un Nuevo Usuario
-router.post("/users", userValidation, createUser);
+router.post("/users", createUser);
 
 //Actualizar info perfil usuario
 router.patch("/users/me", checkToken, updateUserProfile);
