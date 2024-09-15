@@ -24,7 +24,8 @@
   flex-direction: column;
 }
 
-.form__input {
+.form__input-login {
+  width: 378px;
   padding: 10px;
   border: none;
   border-bottom: 1px solid #ccc;

@@ -23,8 +23,11 @@ const { PORT = 3001, DB_URL } = process.env;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
+
 app.use(cors());
-console.log(DB_URL);
+// Habilitar las solicitudes preflight para todas las rutas
+app.options("*", cors());
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

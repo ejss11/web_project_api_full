@@ -10,7 +10,7 @@ function Card({ cardData, onCardClick, onCardLike, onCardDelete }) {
   }`;
 
   const isLiked = cardData.likes.some((i) => i === currentUser._id);
-  console.log("Estes es el like para activar: " + isLiked);
+
   const cardLikeButtonClassName = `card__content-like ${
     isLiked ? "card__content-like_Active" : ""
   }`;

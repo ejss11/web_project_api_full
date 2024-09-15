@@ -24,7 +24,8 @@
   flex-direction: column;
 }
 
-.form__input {
+.form__input-register {
+  width: 378px;
   padding: 10px;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -33,7 +34,7 @@
   border-right: none;
   margin: 0 0 0 0;
   background: transparent;
-  color: #000;
+  color: #fff;
   margin-top: 25px;
 }
 .form__submit {

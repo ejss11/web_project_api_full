@@ -49,7 +49,7 @@ function Login({ onLogin }) {
           placeholder="Correo electrónico"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="form__input"
+          className="form__input-login"
           required
         />
         <input
@@ -58,7 +58,7 @@ function Login({ onLogin }) {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="form__input"
+          className="form__input-login"
           required
         />
         <div className="form__error">

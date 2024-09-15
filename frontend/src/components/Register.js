@@ -46,7 +46,7 @@ function Register({ onRegister }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Correo electrónico"
-          className="form__input"
+          className="form__input-register"
           required
         />
         <input
@@ -55,7 +55,7 @@ function Register({ onRegister }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
-          className="form__input"
+          className="form__input-register"
           required
         />
         <button type="submit" className="form__submit">
